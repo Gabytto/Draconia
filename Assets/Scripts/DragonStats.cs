@@ -6,7 +6,7 @@ public class DragonStats : MonoBehaviour
 {
     [Header("Identidad")]
     public string nombreDragon;
-    public enum TipoElemento { Electrico, Fuego, Agua, Planta }
+    public enum TipoElemento { Electrico, Fuego, Agua, Planta, Roca }
     public TipoElemento elemento;
 
     [Header("Estadísticas de Combate")]

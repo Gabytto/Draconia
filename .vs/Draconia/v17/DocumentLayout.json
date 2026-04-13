@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|c:\\users\\gabytto\\draconia\\draconia\\assets\\scripts\\dragonstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|C:\\Users\\Gabytto\\Draconia\\Draconia\\assets\\scripts\\dragonstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dragonstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CombatManager.cs",
               "ToolTip": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\CombatManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\CombatManager.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAcwDgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T01:29:11.493Z",
               "EditorCaption": ""
@@ -41,7 +41,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\DragonStats.cs",
               "ToolTip": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\DragonStats.cs",
               "RelativeToolTip": "Assets\\Scripts\\DragonStats.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwCwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T01:25:23.855Z",
               "EditorCaption": ""

@@ -51,7 +51,19 @@ public class CombatManager : MonoBehaviour
 
     void Atacar(DragonStats atacante, DragonStats objetivo)
     {
-        Debug.Log(atacante.nombreDragon + " lanza un ataque contra " + objetivo.nombreDragon);
-        objetivo.RecibirDanio(atacante.ataque);
+        float multiplicador = CalcularEfectividad(atacante.elemento, objetivo.elemento);
+        float danioFinal = atacante.ataque * multiplicador;
+
+        Debug.Log(atacante.nombreDragon + " ataca. Efectividad: x" + multiplicador);
+        objetivo.RecibirDanio(danioFinal);
+    }
+
+    float CalcularEfectividad(DragonStats.TipoElemento a, DragonStats.TipoElemento o)
+    {
+        // Ejemplo rápido: Agua le gana a Fuego
+        if (a == DragonStats.TipoElemento.Agua && o == DragonStats.TipoElemento.Fuego) return 2.0f;
+        if (a == DragonStats.TipoElemento.Fuego && o == DragonStats.TipoElemento.Planta) return 2.0f;
+        // ... resto de la lógica
+        return 1.0f;
     }
 }
