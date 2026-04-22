@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 347298984}
   - component: {fileID: 347298985}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Img_prev_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,7 +420,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 620658208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740973918}
+        m_TargetAssemblyTypeName: SelectorDragones, Assembly-CSharp
+        m_MethodName: PrevisualizarDragon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &620658208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1180213960}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740973918}
+        m_TargetAssemblyTypeName: SelectorDragones, Assembly-CSharp
+        m_MethodName: PrevisualizarDragon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1180213960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +807,7 @@ GameObject:
   - component: {fileID: 1243695655}
   - component: {fileID: 1243695656}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Nombre_dragon_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -986,7 +1010,7 @@ GameObject:
   - component: {fileID: 1530173010}
   - component: {fileID: 1530173011}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Img_prev_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1186,7 +1210,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1761518941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740973918}
+        m_TargetAssemblyTypeName: SelectorDragones, Assembly-CSharp
+        m_MethodName: PrevisualizarDragon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1761518941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,7 +1311,7 @@ GameObject:
   - component: {fileID: 1852175451}
   - component: {fileID: 1852175450}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Nombre_dragon_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1480,7 +1516,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1874528911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740973918}
+        m_TargetAssemblyTypeName: SelectorDragones, Assembly-CSharp
+        m_MethodName: PrevisualizarDragon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1874528911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,7 +1649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1920116311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740973918}
+        m_TargetAssemblyTypeName: SelectorDragones, Assembly-CSharp
+        m_MethodName: PrevisualizarDragon
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1920116311
 MonoBehaviour:
   m_ObjectHideFlags: 0

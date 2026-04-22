@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b33ca6c1f24d634ba3e1b7c990c0b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreDragon: Stone Drake
-  fotoDragon: {fileID: 0}
+  nombreDragon: "Drag\xF3n de Agua"
+  fotoDragon: {fileID: 21300000, guid: c626a75215570ca42b613a48cc75ef91, type: 3}
   elemento: 2
   vidaMaxima: 100
   vidaActual: 0
