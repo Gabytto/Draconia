@@ -6,6 +6,7 @@ public class DragonStats : MonoBehaviour
 {
     [Header("Identidad")]
     public string nombreDragon;
+    public Sprite fotoDragon; // <--- ESTA ES LA LÍNEA QUE FALTABA
     public enum TipoElemento { Electrico, Fuego, Agua, Planta, Roca }
     public TipoElemento elemento;
 
@@ -18,14 +19,11 @@ public class DragonStats : MonoBehaviour
 
     void Start()
     {
-        // Al empezar el juego, el dragón nace con la vida a tope
         vidaActual = vidaMaxima;
     }
 
-    // Método simple para recibir daño
     public void RecibirDanio(float cantidad)
     {
-        // El daño final resta la defensa para que sea más justo
         float danioFinal = Mathf.Max(cantidad - defensa, 1);
         vidaActual -= danioFinal;
 
@@ -40,7 +38,6 @@ public class DragonStats : MonoBehaviour
     void Morir()
     {
         Debug.Log(nombreDragon + " ha sido derrotado.");
-        // Por ahora solo lo desactivamos, después podemos poner una animación
         gameObject.SetActive(false);
     }
 }
