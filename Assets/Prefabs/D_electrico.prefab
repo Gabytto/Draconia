@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b33ca6c1f24d634ba3e1b7c990c0b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreDragon: Electric Drake
-  fotoDragon: {fileID: 0}
+  nombreDragon: "Drag\xF3n El\xE9ctrico"
+  fotoDragon: {fileID: 21300000, guid: b51efb05d77089d4483f98069061e7b0, type: 3}
   elemento: 0
   vidaMaxima: 100
   vidaActual: 0
