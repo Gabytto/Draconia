@@ -4,35 +4,75 @@ using TMPro;
 
 public class SelectorDragones : MonoBehaviour
 {
-    [Header("Referencias de UI")]
-    public Image imagenGrandeP1;
-    public TextMeshProUGUI textoNombreP1;
+    [Header("Visualizadores Grandes")]
+    public Image imagenP1;
+    public TextMeshProUGUI nombreP1;
+    public Image imagenP2;
+    public TextMeshProUGUI nombreP2;
 
-    public Image imagenGrandeP2;
-    public TextMeshProUGUI textoNombreP2;
+    [Header("Configuración de Grilla")]
+    // Arrastrá aquí los 5 Buttons de la Jerarquía
+    public DragonStats[] listaDragones;
 
-    [Header("Base de Datos de Dragones")]
-    // Aquí arrastra los ScriptableObjects o los Prefabs de tus dragones
-    public DragonStats[] todosLosDragones;
+    [Header("Marcos de Selección")]
+    public GameObject[] marcosP1; // Los 5 Selector_P1 verdes
+    public GameObject[] marcosP2; // Los 5 Selector_P2 amarillos
 
-    // Esta función la vinculas al OnClick de cada botón de la grilla
-    public void PrevisualizarDragon(int index)
+    private int indexP1 = 0;
+    private int indexP2 = 4;
+
+    void Start()
     {
-        DragonStats seleccionado = todosLosDragones[index];
-
-        // Por ahora, supongamos que el P1 es quien está eligiendo
-        // Luego podemos agregar lógica para que el P2 elija después
-        ActualizarVisualizacion(imagenGrandeP1, textoNombreP1, seleccionado);
+        // Pequeña validación para no tener errores al dar Play
+        if (listaDragones.Length > 0)
+        {
+            ActualizarInterfaz();
+        }
     }
 
-    void ActualizarVisualizacion(Image img, TextMeshProUGUI txt, DragonStats stats)
+    void Update()
     {
-        // Importante: El Sprite que usas aquí debe venir de tus assets de arte
-        // Si usas el script que tenías, asegúrate de tener una variable 'public Sprite fotoMenu' en DragonStats
-        img.sprite = stats.fotoDragon;
-        txt.text = stats.nombreDragon;
+        // Movimiento P1
+        if (Input.GetButtonDown("HorizontalP1"))
+        {
+            int h = (int)Input.GetAxisRaw("HorizontalP1");
+            indexP1 = Mathf.Clamp(indexP1 + h, 0, listaDragones.Length - 1);
+            ActualizarInterfaz();
+        }
 
-        // Activamos la imagen por si estaba transparente/oculta
-        img.gameObject.SetActive(true);
+        // Movimiento P2
+        if (Input.GetButtonDown("HorizontalP2"))
+        {
+            int h = (int)Input.GetAxisRaw("HorizontalP2");
+            indexP2 = Mathf.Clamp(indexP2 + h, 0, listaDragones.Length - 1);
+            ActualizarInterfaz();
+        }
+    }
+
+    void ActualizarInterfaz()
+    {
+        // Seguridad: si no hay dragones en la lista, salimos
+        if (listaDragones.Length == 0) return;
+
+        // Actualización P1
+        if (listaDragones[indexP1] != null)
+        {
+            imagenP1.sprite = listaDragones[indexP1].fotoDragon;
+            nombreP1.text = listaDragones[indexP1].nombreDragon;
+        }
+
+        // Actualización P2
+        if (listaDragones[indexP2] != null)
+        {
+            imagenP2.sprite = listaDragones[indexP2].fotoDragon;
+            nombreP2.text = listaDragones[indexP2].nombreDragon;
+        }
+
+        // Control de los marcos en la grilla
+        for (int i = 0; i < listaDragones.Length; i++)
+        {
+            if (marcosP1.Length > i) marcosP1[i].SetActive(i == indexP1);
+            if (marcosP2.Length > i) marcosP2[i].SetActive(i == indexP2);
+        }
     }
 }
