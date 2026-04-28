@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SelectorDragones : MonoBehaviour
 {
@@ -109,8 +110,13 @@ public class SelectorDragones : MonoBehaviour
 
         if (listoP1 && listoP2)
         {
-            Debug.Log("¡AMBOS LISTOS! Cargando pelea...");
-            // Aquí llamaremos al futuro script de cambio de escena
+            // Guardamos los datos en el manejador persistente
+            ManejadorDeDatos.Instancia.dragonP1 = listaDragones[indexP1];
+            ManejadorDeDatos.Instancia.dragonP2 = listaDragones[indexP2];
+
+            Debug.Log("Datos guardados. ¡Cargando escena de combate!");
+
+            SceneManager.LoadScene("Juego");
         }
     }
 }
