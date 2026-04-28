@@ -3103,23 +3103,23 @@ PrefabInstance:
     - target: {fileID: 6119378285657363966, guid: e9295fc49d4969d4ba32ed6e9ad2509a, type: 3}
       propertyPath: listaDragones.Array.data[0]
       value: 
-      objectReference: {fileID: 1920116313}
+      objectReference: {fileID: 4458258409972911485, guid: c511124829ba1e44294353102fabeb33, type: 3}
     - target: {fileID: 6119378285657363966, guid: e9295fc49d4969d4ba32ed6e9ad2509a, type: 3}
       propertyPath: listaDragones.Array.data[1]
       value: 
-      objectReference: {fileID: 1874528913}
+      objectReference: {fileID: 6156341569513175319, guid: a8e5ab82024d59142812615b7169ebaa, type: 3}
     - target: {fileID: 6119378285657363966, guid: e9295fc49d4969d4ba32ed6e9ad2509a, type: 3}
       propertyPath: listaDragones.Array.data[2]
       value: 
-      objectReference: {fileID: 1180213962}
+      objectReference: {fileID: 724397429393855211, guid: be5d79f0a97116341b2eedef437e511e, type: 3}
     - target: {fileID: 6119378285657363966, guid: e9295fc49d4969d4ba32ed6e9ad2509a, type: 3}
       propertyPath: listaDragones.Array.data[3]
       value: 
-      objectReference: {fileID: 620658210}
+      objectReference: {fileID: 5842498668442501286, guid: b9c33c2674cb62449a57b2aae1fcb719, type: 3}
     - target: {fileID: 6119378285657363966, guid: e9295fc49d4969d4ba32ed6e9ad2509a, type: 3}
       propertyPath: listaDragones.Array.data[4]
       value: 
-      objectReference: {fileID: 1761518943}
+      objectReference: {fileID: 3455002670591907031, guid: c7e56727ccf787c4c8ebd9e098a2928e, type: 3}
     - target: {fileID: 6119378285657363967, guid: e9295fc49d4969d4ba32ed6e9ad2509a, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -83,6 +83,9 @@ public class SelectorDragones : MonoBehaviour
 
     void ActualizarVisualConfirmacion()
     {
+        // 1. Verificamos que las referencias existan para evitar errores de consola
+        if (nombreP1 == null || nombreP2 == null) return;
+
         // --- Jugador 1 ---
         if (listoP1)
         {
@@ -91,7 +94,6 @@ public class SelectorDragones : MonoBehaviour
         }
         else
         {
-            // Si cancela, volvemos a poner el nombre del dragón actual
             nombreP1.text = listaDragones[indexP1].nombreDragon;
             nombreP1.color = Color.white;
         }
@@ -108,15 +110,22 @@ public class SelectorDragones : MonoBehaviour
             nombreP2.color = Color.white;
         }
 
+        // 2. Si ambos están listos, guardamos y saltamos
         if (listoP1 && listoP2)
         {
-            // Guardamos los datos en el manejador persistente
-            ManejadorDeDatos.Instancia.dragonP1 = listaDragones[indexP1];
-            ManejadorDeDatos.Instancia.dragonP2 = listaDragones[indexP2];
+            // IMPORTANTE: Asegurate de que ManejadorDeDatos esté en la escena de selección
+            if (ManejadorDeDatos.Instancia != null)
+            {
+                ManejadorDeDatos.Instancia.dragonP1 = listaDragones[indexP1];
+                ManejadorDeDatos.Instancia.dragonP2 = listaDragones[indexP2];
 
-            Debug.Log("Datos guardados. ¡Cargando escena de combate!");
-
-            SceneManager.LoadScene("Juego");
+                Debug.Log("Datos de Prefabs guardados correctamente.");
+                SceneManager.LoadScene("Juego");
+            }
+            else
+            {
+                Debug.LogError("No se encontró el objeto _ManejadorDeDatos en la escena.");
+            }
         }
     }
 }
