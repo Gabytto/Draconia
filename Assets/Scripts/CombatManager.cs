@@ -1,12 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement; // Necesario para volver a la selección
+using TMPro;
 
 public class CombatManager : MonoBehaviour
 {
-    [Header("Referencias de UI")]
+    [Header("Referencias de UI Combate")]
     public Slider sliderP1;
     public Slider sliderP2;
+
+    [Header("Referencias de UI Victoria")]
+    public GameObject panelVictoria; // Arrastrá el PanelVictoria aquí
+    public TextMeshProUGUI textoGanador;
 
     [Header("Referencias de Spawning")]
     public Transform spawnJugador;
@@ -21,6 +27,8 @@ public class CombatManager : MonoBehaviour
 
     void Start()
     {
+        // Al empezar nos aseguramos de que el panel esté apagado
+        panelVictoria.SetActive(false);
         PrepararCombate();
     }
 
@@ -36,15 +44,12 @@ public class CombatManager : MonoBehaviour
 
             goP2.transform.localScale = new Vector3(-goP2.transform.localScale.x, goP2.transform.localScale.y, goP2.transform.localScale.z);
 
-            // --- ARREGLO DE BARRAS DE VIDA ---
-            // Seteamos el máximo y el valor inicial usando vidaMaxima (dato seguro)
             sliderP1.maxValue = dragonJugador.vidaMaxima;
             sliderP1.value = dragonJugador.vidaMaxima;
 
             sliderP2.maxValue = dragonEnemigo.vidaMaxima;
             sliderP2.value = dragonEnemigo.vidaMaxima;
         }
-
         StartCoroutine(BucleDeCombate());
     }
 
@@ -58,7 +63,6 @@ public class CombatManager : MonoBehaviour
             if (esTurnoJugador) Atacar(dragonJugador, dragonEnemigo);
             else Atacar(dragonEnemigo, dragonJugador);
 
-            // Actualizamos visualmente las barras después de cada golpe
             sliderP1.value = dragonJugador.vidaActual;
             sliderP2.value = dragonEnemigo.vidaActual;
 
@@ -66,7 +70,14 @@ public class CombatManager : MonoBehaviour
             yield return new WaitForSeconds(pausaEntreTurnos);
         }
 
-        Debug.Log("¡Combate terminado!");
+        // --- LÓGICA DE VICTORIA ---
+        string nombreGanador = (dragonJugador.vidaActual > 0) ? dragonJugador.nombreDragon : dragonEnemigo.nombreDragon;
+
+        Debug.Log("¡Combate terminado! Ganador: " + nombreGanador);
+
+        // Activamos el panel y ponemos el nombre
+        panelVictoria.SetActive(true);
+        textoGanador.text = "¡" + nombreGanador.ToUpper() + " ES EL GANADOR!";
     }
 
     void Atacar(DragonStats atacante, DragonStats objetivo)
@@ -74,6 +85,12 @@ public class CombatManager : MonoBehaviour
         float multiplicador = CalcularEfectividad(atacante.elemento, objetivo.elemento);
         float danioFinal = atacante.ataque * multiplicador;
         objetivo.RecibirDanio(danioFinal);
+    }
+
+    // Función para el botón de la UI
+    public void VolverALaSeleccion()
+    {
+        SceneManager.LoadScene("Seleccion"); // Ajustá el nombre si es "SeleccionarDragones"
     }
 
     float CalcularEfectividad(DragonStats.TipoElemento a, DragonStats.TipoElemento o)

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: dfc10fba726998e47a7f3dae47feecd6
   - enabled: 1
-    path: Assets/Scenes/SeleccionarDragones.unity
+    path: Assets/Scenes/SeleccionDragones.unity
     guid: f6716fce0453f684fb84091a3b1b6e1a
   - enabled: 1
     path: Assets/Scenes/Juego.unity
