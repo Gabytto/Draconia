@@ -6,7 +6,7 @@ public class DragonStats : MonoBehaviour
 {
     [Header("Identidad")]
     public string nombreDragon;
-    public Sprite fotoDragon; // <--- ESTA ES LA LÍNEA QUE FALTABA
+    public Sprite fotoDragon;
     public enum TipoElemento { Electrico, Fuego, Agua, Planta, Roca }
     public TipoElemento elemento;
 
@@ -17,20 +17,22 @@ public class DragonStats : MonoBehaviour
     public float defensa = 10f;
     public float velocidad = 5f;
 
-    void Start()
+    void Awake() // Uso Awake para que la vida esté lista ANTES que el CombatManager la pida
     {
         vidaActual = vidaMaxima;
     }
 
     public void RecibirDanio(float cantidad)
     {
-        float danioFinal = Mathf.Max(cantidad - defensa, 1);
+        // Ajuste para que la defensa no anule todo el ataque y siempre saquen algo de vida
+        float danioFinal = Mathf.Max(cantidad - (defensa * 0.5f), 5f);
         vidaActual -= danioFinal;
 
         Debug.Log(nombreDragon + " recibió " + danioFinal + " de daño. Vida restante: " + vidaActual);
 
         if (vidaActual <= 0)
         {
+            vidaActual = 0;
             Morir();
         }
     }

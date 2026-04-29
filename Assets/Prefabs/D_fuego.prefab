@@ -100,8 +100,8 @@ MonoBehaviour:
   nombreDragon: "Drag\xF3n Fuego"
   fotoDragon: {fileID: 21300000, guid: cb47ce91a213e9d4e83ac82073891abd, type: 3}
   elemento: 1
-  vidaMaxima: 100
+  vidaMaxima: 1000
   vidaActual: 0
-  ataque: 22
+  ataque: 120
   defensa: 8
   velocidad: 5
