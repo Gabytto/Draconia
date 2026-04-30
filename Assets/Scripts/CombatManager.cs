@@ -41,7 +41,6 @@ public class CombatManager : MonoBehaviour
             dragonJugador = goP1.GetComponent<DragonStats>();
             dragonEnemigo = goP2.GetComponent<DragonStats>();
 
-            // Espejar al P2
             goP2.transform.localScale = new Vector3(-goP2.transform.localScale.x, goP2.transform.localScale.y, goP2.transform.localScale.z);
 
             sliderP1.maxValue = dragonJugador.vidaMaxima;
@@ -63,19 +62,12 @@ public class CombatManager : MonoBehaviour
             if (esTurnoJugador) Atacar(dragonJugador, dragonEnemigo);
             else Atacar(dragonEnemigo, dragonJugador);
 
-            // Esperamos un momento para que el proyectil viaje antes de actualizar los sliders
-            yield return new WaitForSeconds(0.5f);
-
-            sliderP1.value = dragonJugador.vidaActual;
-            sliderP2.value = dragonEnemigo.vidaActual;
-
-            esTurnoJugador = !esTurnoJugador;
+            // Solo esperamos el tiempo entre turnos definido en el Inspector
             yield return new WaitForSeconds(pausaEntreTurnos);
         }
 
-        // --- LÓGICA DE VICTORIA ---
+        // Lógica de Victoria
         string jugadorGanador = (dragonJugador.vidaActual > 0) ? "PLAYER 1" : "PLAYER 2";
-
         panelVictoria.SetActive(true);
         textoGanador.text = "¡" + jugadorGanador + " WIN!";
     }
@@ -85,7 +77,6 @@ public class CombatManager : MonoBehaviour
         float multiplicador = CalcularEfectividad(atacante.elemento, objetivo.elemento);
         float danioFinal = atacante.ataque * multiplicador;
 
-        // Disparo de proyectil
         if (atacante.prefabAtaque != null)
         {
             GameObject goProyectil = Instantiate(atacante.prefabAtaque, atacante.transform.position, Quaternion.identity);
@@ -94,14 +85,21 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            // Daño directo por si no hay prefab asignado
             objetivo.RecibirDanio(danioFinal);
+            ActualizarBarrasVida();
         }
+    }
+
+    // Esta función la llama el proyectil al impactar
+    public void ActualizarBarrasVida()
+    {
+        if (dragonJugador != null) sliderP1.value = dragonJugador.vidaActual;
+        if (dragonEnemigo != null) sliderP2.value = dragonEnemigo.vidaActual;
     }
 
     public void VolverALaSeleccion()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("Seleccion");
     }
 
     float CalcularEfectividad(DragonStats.TipoElemento a, DragonStats.TipoElemento o)

@@ -9,13 +9,12 @@ public class Proyectil : MonoBehaviour
     private Transform objetivo;
     private bool impactado = false;
 
-    // Esta función la llama el CombatManager al disparar
     public void Configurar(Transform target, float danioAtaque)
     {
         objetivo = target;
         danio = danioAtaque;
 
-        // Rotar el proyectil para que mire hacia donde va
+        // Rotar el proyectil para que mire hacia el objetivo
         Vector3 direccion = (objetivo.position - transform.position).normalized;
         float angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angulo);
@@ -25,10 +24,8 @@ public class Proyectil : MonoBehaviour
     {
         if (objetivo == null || impactado) return;
 
-        // Movimiento suave hacia el enemigo
         transform.position = Vector2.MoveTowards(transform.position, objetivo.position, velocidad * Time.deltaTime);
 
-        // Detectar si llegó al objetivo
         if (Vector2.Distance(transform.position, objetivo.position) < 0.2f)
         {
             Impactar();
@@ -37,15 +34,22 @@ public class Proyectil : MonoBehaviour
 
     void Impactar()
     {
+        if (impactado) return;
         impactado = true;
 
         DragonStats statsEnemigo = objetivo.GetComponent<DragonStats>();
         if (statsEnemigo != null)
         {
             statsEnemigo.RecibirDanio(danio);
+
+            // Buscamos el Manager para actualizar la barra de vida al instante
+            CombatManager manager = FindObjectOfType<CombatManager>();
+            if (manager != null)
+            {
+                manager.ActualizarBarrasVida();
+            }
         }
 
-        // Podés agregar aquí un Instantiate de una explosión si tenés el prefab
         Destroy(gameObject);
     }
 }
