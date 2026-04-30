@@ -100,6 +100,7 @@ MonoBehaviour:
   nombreDragon: "Drag\xF3n Agua"
   fotoDragon: {fileID: 21300000, guid: c626a75215570ca42b613a48cc75ef91, type: 3}
   elemento: 2
+  prefabAtaque: {fileID: 629461910555466430, guid: dfc0039f0c8bfed4aaf429eeffec9671, type: 3}
   vidaMaxima: 1000
   vidaActual: 0
   ataque: 90

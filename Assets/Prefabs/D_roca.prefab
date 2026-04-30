@@ -100,6 +100,7 @@ MonoBehaviour:
   nombreDragon: "Drag\xF3n Roca"
   fotoDragon: {fileID: 21300000, guid: 16c9db006b0019c49aeae2e5c6a40209, type: 3}
   elemento: 4
+  prefabAtaque: {fileID: 3422085718472031155, guid: e83b14be70954ac448b95c812712e8d5, type: 3}
   vidaMaxima: 1200
   vidaActual: 0
   ataque: 70

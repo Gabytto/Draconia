@@ -10,6 +10,9 @@ public class DragonStats : MonoBehaviour
     public enum TipoElemento { Electrico, Fuego, Agua, Planta, Roca }
     public TipoElemento elemento;
 
+    [Header("Visuales de Ataque")]
+    public GameObject prefabAtaque; // <-- El proyectil específico de este dragón
+
     [Header("Estadísticas de Combate")]
     public float vidaMaxima = 100f;
     public float vidaActual;
@@ -17,14 +20,14 @@ public class DragonStats : MonoBehaviour
     public float defensa = 10f;
     public float velocidad = 5f;
 
-    void Awake() // Uso Awake para que la vida esté lista ANTES que el CombatManager la pida
+    void Awake()
     {
         vidaActual = vidaMaxima;
     }
 
     public void RecibirDanio(float cantidad)
     {
-        // Ajuste para que la defensa no anule todo el ataque y siempre saquen algo de vida
+        // Ajuste para que la defensa no anule todo el ataque
         float danioFinal = Mathf.Max(cantidad - (defensa * 0.5f), 5f);
         vidaActual -= danioFinal;
 
