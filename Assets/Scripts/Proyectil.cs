@@ -3,7 +3,7 @@ using UnityEngine;
 public class Proyectil : MonoBehaviour
 {
     [Header("Configuración")]
-    public float velocidad = 12f;
+    public float velocidad = 35f;
 
     private float danio;
     private Transform objetivo;

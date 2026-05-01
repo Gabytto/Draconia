@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Gabytto\\Draconia\\Draconia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|c:\\users\\gabytto\\draconia\\draconia\\assets\\scripts\\selectordragones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\selectordragones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|c:\\users\\gabytto\\draconia\\draconia\\assets\\scripts\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|c:\\users\\gabytto\\draconia\\draconia\\assets\\scripts\\combatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|C:\\Users\\Gabytto\\Draconia\\Draconia\\assets\\scripts\\dragonstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dragonstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|C:\\Users\\Gabytto\\Draconia\\Draconia\\assets\\scripts\\combatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F59B26A2-CE4C-679C-369F-16F9187B5748}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,19 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SelectorDragones.cs",
+              "DocumentMoniker": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\SelectorDragones.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SelectorDragones.cs",
+              "ToolTip": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\SelectorDragones.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SelectorDragones.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T02:15:40.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MenuPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuPrincipal.cs",
               "ToolTip": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\MenuPrincipal.cs",
               "RelativeToolTip": "Assets\\Scripts\\MenuPrincipal.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAcAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T01:46:21.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CombatManager.cs",
               "DocumentMoniker": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\CombatManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CombatManager.cs",
@@ -47,8 +64,7 @@
               "RelativeToolTip": "Assets\\Scripts\\CombatManager.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAwwEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T01:29:11.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-08T01:29:11.493Z"
             },
             {
               "$type": "Document",
@@ -58,9 +74,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\DragonStats.cs",
               "ToolTip": "C:\\Users\\Gabytto\\Draconia\\Draconia\\Assets\\Scripts\\DragonStats.cs",
               "RelativeToolTip": "Assets\\Scripts\\DragonStats.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwCoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T01:25:23.855Z"
+              "WhenOpened": "2026-04-08T01:25:23.855Z",
+              "EditorCaption": ""
             }
           ]
         }

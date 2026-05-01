@@ -61,7 +61,7 @@ public class CombatManager : MonoBehaviour
         {
             if (esTurnoJugador) Atacar(dragonJugador, dragonEnemigo);
             else Atacar(dragonEnemigo, dragonJugador);
-
+            esTurnoJugador = !esTurnoJugador;
             // Solo esperamos el tiempo entre turnos definido en el Inspector
             yield return new WaitForSeconds(pausaEntreTurnos);
         }
@@ -69,7 +69,7 @@ public class CombatManager : MonoBehaviour
         // Lógica de Victoria
         string jugadorGanador = (dragonJugador.vidaActual > 0) ? "PLAYER 1" : "PLAYER 2";
         panelVictoria.SetActive(true);
-        textoGanador.text = "¡" + jugadorGanador + " WIN!";
+        textoGanador.text = jugadorGanador + " WINS!";
     }
 
     void Atacar(DragonStats atacante, DragonStats objetivo)
@@ -99,7 +99,7 @@ public class CombatManager : MonoBehaviour
 
     public void VolverALaSeleccion()
     {
-        SceneManager.LoadScene("Seleccion");
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
     float CalcularEfectividad(DragonStats.TipoElemento a, DragonStats.TipoElemento o)
